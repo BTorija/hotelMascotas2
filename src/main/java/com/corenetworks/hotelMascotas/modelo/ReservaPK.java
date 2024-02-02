@@ -16,6 +16,9 @@ import java.util.Objects;
 
 
 public class ReservaPK implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idReserva;
     @ManyToOne
     @JoinColumn(name= "idMascota", nullable = false, foreignKey = @ForeignKey(name= "FK_reserva_mascota"))
     private Mascota mascota;
